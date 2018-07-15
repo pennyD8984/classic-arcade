@@ -36,3 +36,4 @@ Update the value of 'speed'
 - Change game design  
 - Implement a service worker  
 - set interval between keyPress 
+- Implement a modal to select character
