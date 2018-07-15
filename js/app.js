@@ -8,6 +8,7 @@
 
 // Enemies our player must avoid
 let allEnemies = [];
+let speed = 1000;
 
 let Enemy = function(x, y) {
     this.sprite = "images/enemy-bug.png";
@@ -23,7 +24,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     if(this.x < 520){
-        this.x += 600 * dt;
+        this.x += speed * dt;
     }
     else{
         this.x = Math.floor(Math.random()*(-400 - (-50) +1)+ (-50));
@@ -75,7 +76,7 @@ function addStars(){
     ul.classList = 'stars';
     let body = document.querySelector('BODY');
     body.prepend(ul);    
-    for (let i = 1; i <= 4; i++)
+    for (let i = 1; i <= 3; i++)
     {
         let li = document.createElement("li");  
         let i = document.createElement("i");
